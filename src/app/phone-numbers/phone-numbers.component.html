@@ -1,0 +1,27 @@
+<section class="pricing-section">
+  <div class="row justify-content-md-center">
+    <div class="col-xl-5 col-lg-6 col-md-8">
+      <h2
+        class="section-title text-center title-ex1"
+        style="margin-bottom: 3rem"
+      >
+        <u>Welcome {{userName}}!</u>
+      </h2>
+    </div>
+  </div>
+
+  <div class="contain" id="main-container">
+    <div class="card">
+      <div class="card-header"><b>Active Phone Numbers</b></div>
+      <div class="card-body">
+        <table class="table table-striped table-hover table-bordered">
+          <tbody *ngFor="let phone of userPhoneNumberList">
+            <tr *ngIf="phone?.phoneNumber">
+              <td>{{ phone?.phoneNumber }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>

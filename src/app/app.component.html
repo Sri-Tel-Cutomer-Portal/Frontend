@@ -1,0 +1,70 @@
+<div>
+  <nav ngbNav #nav="ngbNav" class="nav-tabs">
+    <ng-container ngbNavItem>
+      <a class="nav-link" routerLink="/">Home</a>
+      <ng-template ngbNavContent> </ng-template>
+    </ng-container>
+    <ng-container ngbNavItem>
+      <a class="nav-link" routerLink="/login">Log-In</a>
+      <ng-template ngbNavContent> </ng-template>
+    </ng-container>
+    <ng-container ngbNavItem>
+      <a class="nav-link" routerLink="/plans">Plans</a>
+      <ng-template ngbNavContent> </ng-template>
+    </ng-container>
+    <ng-container ngbNavItem>
+      <a class="nav-link" routerLink="/phonenumber">Phone Numbers</a>
+      <ng-template ngbNavContent> </ng-template>
+    </ng-container>
+    <ng-container ngbNavItem class="">
+      <a class="nav-link" routerLink="/devices">Devices</a>
+      <ng-template ngbNavContent> </ng-template>
+    </ng-container>
+
+    <ng-container ngbNavItem class="">
+      <a class="nav-link" href="/login">Logout</a>
+      <ng-template ngbNavContent> </ng-template>
+    </ng-container>
+  </nav>
+
+  <div [ngbNavOutlet]="nav" class="mt-2"></div>
+</div>
+
+<!----------------------------------------------->
+
+<!-- <nav class="navbar navbar-expand-lg bg-dark">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse" id="navbarText">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="/">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/plans">Plans</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Sing-In</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/billing">Billing</a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/phonenumber">Phone Numbers</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/devices">Devices</a>
+        </li>
+
+      </ul>
+      <span class="navbar-text"> Navbar text with an inline element </span>
+    </div>
+  </div>
+</nav> -->
+<div id="container" class="mainPage">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,31 @@
+#container{
+
+    height: calc(100vh - 65px);
+  }
+
+#navbarText{
+    font-size: 2rem;
+
+}
+
+
+.navbar a {
+    color: white;
+}
+
+.nav-link{
+    color: black;
+    background-color: beige;
+}
+.nav-tabs{
+    width: 100%;
+}
+.right-side-button{
+    float: right;
+}
+
+.nav-link-logout{
+    color: black;
+    background-color: beige;
+}
+
