@@ -4,7 +4,6 @@ import { CurrentPlan } from '../Response/currentPlans';
 import { Plan } from '../Response/plans';
 import { PlanService } from '../service/plan.service';
 import { CurrentPlansService } from '../service/current-plans.service';
-import { SharedService } from '../service/shared.service';
 
 @Component({
   selector: 'app-plans',
@@ -27,7 +26,6 @@ export class PlansComponent implements OnInit {
   constructor(
     private planService: PlanService,
     private currentPlanService: CurrentPlansService,
-    private sharedService: SharedService
   ) {}
 
   public findsum(data) {
@@ -38,27 +36,7 @@ export class PlansComponent implements OnInit {
       this.total += this.value[j].price;
       this.totalDevices += this.value[j].deviceLimit;
     }
-    //pass the device limit to the devices component
-    this.sharedService.setDeviceLimit(this.totalDevices);
   }
-
-  //////////////////////////////////////////////////////////////////////////////
-  //use this to get the current user plans
-  public getUserCurrentPlans(): void {
-    this.currentPlanService
-      .getUserCurrentPlans(this.sharedService.getUserId())
-      .subscribe({
-        next: (response: CurrentPlan[]) => {
-          this.currentUserPlansList = response;
-          this.findsum(this.currentUserPlansList);
-        },
-        error: (error: HttpErrorResponse) => {
-          console.log(error.message);
-          alert(error.message);
-        },
-      });
-  }
-  //////////////////////////////////////////////////////////////////////////////
 
   public getCurrentPlans(): void {
     this.currentPlanService.getCurrentPlans().subscribe({
@@ -138,8 +116,6 @@ export class PlansComponent implements OnInit {
   async ngOnInit() {
     this.getPlans();
     this.getCurrentPlans();
-
-    this.userName = this.sharedService.getUserName();
 
     //this.getUserCurrentPlans(); //unused call
   }

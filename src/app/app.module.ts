@@ -12,29 +12,24 @@ import { MatInputModule } from '@angular/material/input';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatTableModule } from '@angular/material/table';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { UserComponent } from './user/user.component';
 import { PlansComponent } from './plans/plans.component';
-import { DevicesComponent } from './devices/devices.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './home/home.component';
-import { PhoneNumbersComponent } from './phone-numbers/phone-numbers.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserComponent,
     PlansComponent,
-    DevicesComponent,
     LoginComponent,
     HomeComponent,
-    PhoneNumbersComponent,
   ],
   imports: [
     BrowserModule,

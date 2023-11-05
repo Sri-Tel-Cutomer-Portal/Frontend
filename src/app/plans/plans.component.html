@@ -3,37 +3,29 @@
     <div class="container">
       <div class="row justify-content-md-center">
         <div class="col-xl-5 col-lg-6 col-md-8">
-          <h2
-            class="section-title text-center title-ex1"
-            style="margin-bottom: 3rem"
-          >
-            <u>Welcome {{userName}}!</u>
-          </h2>
-          <div class="section-title text-center title-ex1">
-            <h2>Our Plans!</h2>
-          </div>
+          <div class="card-header"><b>Our Plans</b></div>
         </div>
       </div>
+
       <!---------------------Plans Table---------------------------->
       <div class="container" id="main-container">
         <div class="row">
           <div *ngFor="let plan of plansList" class="col-md-4">
             <div class="price-card">
               <h2>{{ plan.planName }}</h2>
-
               <p class="price">
                 <span>{{ plan.price }}</span
                 >/ Month
               </p>
               <ul class="pricing-offers">
-                <li>Have {{ plan.deviceLimit }} devices all at once!</li>
+                <li>Valid only for 30 Days</li>
               </ul>
 
               <a
                 class="btn btn-primary btn-lg"
                 (click)="onOpenModal(plan, 'add')"
                 style="
-                  font-size: 1.6rem;
+                  font-size: 1.2rem;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -80,19 +72,6 @@
                 class="form-control"
                 id="planName"
                 placeholder="Plan Name"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <label for="deviceLimit">Device Limit</label>
-              <input
-                readonly
-                type="number"
-                ngModel="{{ editPlan?.deviceLimit }}"
-                name="deviceLimit"
-                class="form-control"
-                id="deviceLimit"
-                placeholder="Device Limit"
                 required
               />
             </div>
@@ -191,7 +170,6 @@
           <thead>
             <tr>
               <th>Name</th>
-              <th>Device Limit</th>
               <th>Price</th>
               <th>Actions</th>
             </tr>
@@ -199,35 +177,19 @@
           <tbody *ngFor="let currentPlan of currentPlansList">
             <tr>
               <td>{{ currentPlan.planName }}</td>
-              <td>{{ currentPlan.deviceLimit }}</td>
               <td>{{ currentPlan.price }}</td>
               <td>
                 <button
                   style="display: block; margin: auto"
                   (click)="onOpenModal(currentPlan, 'delete')"
                   class="btn btn-outline-danger"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-trash3-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      d="M11 1.5v1h3.5a.5.5 0 0 1 0 1h-.538l-.853 10.66A2 2 0 0 1 11.115 16h-6.23a2 2 0 0 1-1.994-1.84L2.038 3.5H1.5a.5.5 0 0 1 0-1H5v-1A1.5 1.5 0 0 1 6.5 0h3A1.5 1.5 0 0 1 11 1.5Zm-5 0v1h4v-1a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5ZM4.5 5.029l.5 8.5a.5.5 0 1 0 .998-.06l-.5-8.5a.5.5 0 1 0-.998.06Zm6.53-.528a.5.5 0 0 0-.528.47l-.5 8.5a.5.5 0 0 0 .998.058l.5-8.5a.5.5 0 0 0-.47-.528ZM8 4.5a.5.5 0 0 0-.5.5v8.5a.5.5 0 0 0 1 0V5a.5.5 0 0 0-.5-.5Z"
-                    />
-                  </svg>
+                >Deactivate
                 </button>
               </td>
             </tr>
           </tbody>
           <tr>
             <td><b>Totals</b></td>
-            <td>
-              <b>{{totalDevices}}</b>
-            </td>
             <td>
               <b>$ {{total}}</b>
             </td>

@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { User } from '../Response/user';
 import { LoginService } from './login.service';
 import { of } from 'rxjs';
-import { SharedService } from './shared.service';
 import { Router } from '@angular/router';
 import { HttpErrorResponse } from '@angular/common/http';
 
@@ -17,7 +16,6 @@ export class AuthService {
 
   constructor(
     private loginuserService: LoginService,
-    private sharedService: SharedService,
     private router: Router
   ) {
     this.isloggedIn = false;
@@ -30,10 +28,6 @@ export class AuthService {
       next: (data) => {
         this.isloggedIn = true;
 
-        //pass the userId to the other components
-        this.sharedService.setUserId(data);
-        //pass the userName to the other components
-        this.sharedService.setUserName(this.user.userName);
         console.log(this.user.userName);
         this.router.navigate(['plans']);
 

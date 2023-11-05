@@ -10,8 +10,8 @@
   display: flex;
   align-items: center;
   text-align: center;
-margin-top: 10px;
-  font-size: 1.4rem;
+  margin-top: 10px;
+  font-size: 1.2rem;
 }
 
 .section-title h2 {
@@ -121,17 +121,17 @@ margin-top: 10px;
   transform: rotate(45deg);
 }
 .price-card h2 {
-  font-size: 2.8rem;
+  font-size: 2.0rem;
   font-weight: 600;
 }
 .price-card .btn {
-  font-size: 11px;
+  /*font-size: 11px;*/
   border-radius: 100px;
-  padding: 0 25px;
+  padding: 0 15px;
   border: 0;
   width: 10rem;
   height: 3rem;
-  font-size: 10rem;
+  font-size: 5rem;
   text-align: center;
   color: #fff;
   float: right;
@@ -152,7 +152,7 @@ p.price span {
   display: inline-block;
   padding: 45px 15px 50px;
   padding-right: 0;
-  font-size: 60px;
+  font-size: 48px;
   font-weight: 600;
   color: #0cc652;
   position: relative;
@@ -160,16 +160,16 @@ p.price span {
 p.price span:before {
   position: absolute;
   content: "$";
-  font-size: 16px;
+  font-size: 8px;
   top: 25px;
-  font-weight: 300;
+  font-weight: 200;
   left: 0;
 }
 .pricing-offers {
 
   text-align: center;
   padding: 0 0 10px;
-  font-size: 1.7rem;
+  font-size: 1.3rem;
 }
 .pricing-offers li {
   padding: 0 0 16px;
@@ -183,7 +183,7 @@ ul li {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) { 
+@media screen and (min-width: 768px) {
   .modal:before {
     display: inline-block;
     vertical-align: middle;
@@ -199,67 +199,67 @@ ul li {
 }
 
 .modal-content {
-    height: 36rem;
+    height: 28rem;
     width: 50rem;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.4rem;
     background-color:#BBD6EC;
 }
 #deleteModalContent {
   height: 14rem;
   width: 51rem;
   font-weight: bold;
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   background-color:#BBD6EC;
 
-} 
- 
+}
+
 .modal-title{
-  font-size: 2.5rem;
+  font-size: 1.8rem;
 }
 .modal-header {
   background-color: #337AB7;
   padding:16px 16px;
   color:#FFF;
   border-bottom:2px dashed #337AB7;
- 
+
  }
  input{
-  font-size: 2rem;
+  font-size: 1.4rem;
   margin-top: 1rem;
   margin-bottom: 2rem;
   width: 95%;
  }
 
  .modal .btn {
-  font-size: 11px;
+  /*font-size: 11px;*/
   border-radius: 100px;
-  padding: 0 25px;
+  padding: 0 15px;
   border: 0;
   width: 10rem;
   height: 3rem;
-  font-size: 2rem;
+  font-size: 1.3rem;
   text-align: center;
   color: #fff;
   float: right;
 }
 
 .contain{
-margin: auto;
-padding-top: 100px;
-width: 40%;
+  margin: auto;
+  padding-top: 100px;
+  width: 40%;
 }
 
 td {
-  font-size: 1.8rem;
+  font-size: 1.0rem;
   padding: 1rem;
 }
 th {
-  font-size: 2.3rem;
+  font-size: 1.3rem;
   padding: 1rem;
 }
 .card-header {
-  font-size: 3rem;
+  font-size: 2.0rem;
   padding: 1.8rem;
   text-align: center;
 }
